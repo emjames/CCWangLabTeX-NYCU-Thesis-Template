@@ -1,3 +1,30 @@
 \chapter{How to use citations} \label{labelIfyouWant}
 
-Here are the related works\cite{Gallager:1962,Mackay:1999,IEEE 802.11an,IEEE802.15.3c} and \cite{M.P.C.Fossorier}.
+
+
+\subsection{Biblatex}
+
+From your favorite citation manager export a BibTeX library with the citations you need to \texttt{references/refs.bib}
+
+
+
+\subsection{Compilation}
+
+\begin{itemize}
+
+   \item Compile document with XeLaTeX to write citations to \texttt{.aux} file\\ (i.e.\ xelatex ThesisTemplate.tex)
+
+   \item Run biber on your document put the relevant entries into \texttt{.bbl} file\\ (i.e.\ biber ThesisTemplate)
+
+   \item Compile document with XeLaTeX to include the \texttt{.bbl} file\\ (i.e.\ xelatex ThesisTemplate.tex)
+
+   \item Compile document with XeLaTeX again to correctly label and include the citations\\ (i.e.\ xelatex ThesisTemplate.tex)
+
+\end{itemize}
+
+
+
+\subsection{Example}
+
+Here are the related works~\cite{Chu2019}.
+
